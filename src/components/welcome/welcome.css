@@ -1,0 +1,27 @@
+
+.welcome{
+    display: grid;
+    padding: 1rem;
+}
+
+.welcome__title{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    padding: 1rem;
+}
+
+.welcome__subtitle{
+    font-size: var(--tiny-font-size);
+}
+
+.welcome__img{
+    background: url(../../assets/welcome.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    order: 1;
+    width: 250px;
+    height: 190px;
+    border-radius: 10%;
+    margin: auto;
+}
