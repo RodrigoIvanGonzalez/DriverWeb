@@ -2,16 +2,17 @@
 .welcome{
     display: grid;
     padding: 1rem;
+    position: relative;
 }
 
 .welcome__title{
-    font-size: var(--small-font-size);
-    font-weight: var(--font-medium);
-    padding: 1rem;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    padding: 1rem 0;
 }
 
 .welcome__subtitle{
-    font-size: var(--tiny-font-size);
+    font-size: var(--small-font-size);
 }
 
 .welcome__img{

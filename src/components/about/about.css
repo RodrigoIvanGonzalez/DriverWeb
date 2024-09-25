@@ -1,0 +1,39 @@
+.about{
+    padding:  1rem;
+}
+
+.about__content{
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    padding: 1rem;
+}
+
+.about__description{
+    align-self: center;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.about__img{
+    background: url(../../assets/perfilCV.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    order: 1;
+    width: 145px;
+    height: 190px;
+    border-radius: 50%  30% ;
+    margin: auto;
+    grid-column-start: 2;
+}
+
+.about__me-title{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    padding: 1rem 0;
+
+}
+
+.about__me-subtitle{
+    font-size: var(--small-font-size);
+}

@@ -12,10 +12,10 @@ const Header = () => {
 });
 
 const [Toggle, showMenu] = useState(false);
-const[activeNav, setActiveNav] = useState("#home")
+const[activeNav, setActiveNav] = useState("#welcome")
 
     return (
-    <header className='header'>
+    <header className='header' id='home'>
         <nav className="nav container">
             <a href="index.html" className="nav__logo">Conductor</a>
         
@@ -24,7 +24,7 @@ const[activeNav, setActiveNav] = useState("#home")
                 }>
                 <ul className="nav__list grid">
                 <li className="nav__item">
-                        <a href="#home" onClick={() => setActiveNav('#home')} className={activeNav === "#home" ? 'nav__link active-link' : 'nav__link'}>
+                        <a href="#welcome" onClick={() => setActiveNav('#welcome')} className={activeNav === "#home" ? 'nav__link active-link' : 'nav__link'}>
                             <i className="uil uil-estate nav__icon"></i> Bienvenido
                         </a>
                     </li>
@@ -36,13 +36,13 @@ const[activeNav, setActiveNav] = useState("#home")
                     </li>
 
                     <li className="nav__item">
-                        <a href="#skills" onClick={() => setActiveNav('#skills')} className={activeNav === "#skills" ? 'nav__link active-link' : 'nav__link'}>
+                        <a href="#travel" onClick={() => setActiveNav('#travel')} className={activeNav === "#skills" ? 'nav__link active-link' : 'nav__link'}>
                             <i className="uil uil-file-alt nav__icon"></i> Su viaje
                         </a>
                     </li>
 
                     <li className="nav__item">
-                        <a href="#services" onClick={() => setActiveNav('#services')} className={activeNav === "#services" ? 'nav__link active-link' : 'nav__link'}>
+                        <a href="#tips" onClick={() => setActiveNav('#tips')} className={activeNav === "#services" ? 'nav__link active-link' : 'nav__link'}>
                             <i className="uil uil-briefcase-alt nav__icon"></i> Propinas
                         </a>
                     </li>
