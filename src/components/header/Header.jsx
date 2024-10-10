@@ -42,8 +42,8 @@ const[activeNav, setActiveNav] = useState("#welcome")
                     </li>
 
                     <li className="nav__item">
-                        <a href="#tips" onClick={() => setActiveNav('#tips')} className={activeNav === "#services" ? 'nav__link active-link' : 'nav__link'}>
-                            <i className="uil uil-briefcase-alt nav__icon"></i> Propinas
+                        <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === "#services" ? 'nav__link active-link' : 'nav__link'}>
+                            <i className="uil uil-briefcase-alt nav__icon"></i> Contacto
                         </a>
                     </li>
 

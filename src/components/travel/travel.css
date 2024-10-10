@@ -1,0 +1,17 @@
+.travel{
+padding: 1rem;
+}
+
+hr {
+    border: 0px;
+    height: 1px;
+    margin: 0 0 0 6rem;
+    background-color: black;
+    width: 55%;
+}
+
+.travel__subtitle{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    padding: 1rem 0rem;
+}
