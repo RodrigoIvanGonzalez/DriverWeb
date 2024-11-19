@@ -1,9 +1,9 @@
 
-import Header from "./src/components/Header.jsx"
-import Welcome from "./src/components/Welcome.jsx"
-import About from "./src/components/About.jsx"
-import Travel from "./src/components/Travel.jsx"
-import Contact from "./src/components/Contact.jsx"
+import Header from "./components/Header.jsx"
+import Welcome from "./components/Welcome.jsx"
+import About from "./components/About.jsx"
+import Travel from "./components/Travel.jsx"
+import Contact from "./components/Contact.jsx"
 
 function App() {
 
