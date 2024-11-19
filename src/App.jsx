@@ -1,5 +1,5 @@
 
-import Header from "./src/components/header"
+import Header from "./src/components/Header"
 import Welcome from "./src/components/Welcome"
 import About from "./src/components/About"
 import Travel from "./src/components/Travel"
