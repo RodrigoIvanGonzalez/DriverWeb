@@ -1,6 +1,6 @@
 
-import Header from ".src/components/header"
-import Welcome from ".src/components/Welcome"
+import Header from "./src/components/header"
+import Welcome from "./src/components/Welcome"
 import About from "./src/components/About"
 import Travel from "./src/components/Travel"
 import Contact from "./src/components/Contact"
