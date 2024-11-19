@@ -26,6 +26,12 @@
   .next{
     @apply absolute top-40 text-blue-600 bg-transparent font-bold text-3xl right-[50px] 
   }
+  .contact__form-input{
+    @apply absolute top-0 left-0 w-full h-full border-2 border-solid border-black/30 outline-none bg-none rounded-xl p-6 z-10
+  }
+  .contact__form-tag{
+    @apply absolute -top-3 left-5 p-1 text-xs z-20 bg-white text-[hsl()]
+  }
   
 }
 

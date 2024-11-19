@@ -23,7 +23,7 @@ const Header = () =>{
 
     return (
         <header className='top-auto bottom-0  w-screen dark:bg-gray-800 ' id='home'>
-            <nav className="fixed flex justify-between items-center gap-4 bottom-0 h-[3rem] p-3 w-screen bg-[#e1e1e1] dark:bg-[#475569] z-50 ">
+            <nav className="fixed flex justify-between items-center gap-4 bottom-0 h-[4rem] p-6 w-screen bg-[#e1e1e1] dark:bg-[#475569] z-50 ">
                 <a href="index.html" className=""><span className="  font-bold  bg-clip-text text-transparent bg-Gradient-Title text-3xl  ">Hola !</span></a>
 
                 <div className={Toggle ? 'nav-menu show-menu dark:bg-Gradient-show-menu dark:shadow-3da' : 'nav-menu'}>
@@ -67,7 +67,7 @@ const Header = () =>{
                     </ul>
 
 
-                    <i className='uil uil-times absolute block right-[1.3rem] bottom-2 text-2xl cursor-pointer text-Title-color hover:text-Tilte-Color-Dark dark:text-gray-300 ' onClick={()=> showMenu(!Toggle)} ></i>
+                    <i className='uil uil-times absolute block right-[1.2rem] bottom-4 text-2xl cursor-pointer text-Title-color hover:text-Tilte-Color-Dark dark:text-gray-300 ' onClick={()=> showMenu(!Toggle)} ></i>
                 </div>
                 <div className=""  >
                     <i className="uil uil-apps text-Gradient-Title block cursor-pointer text-lg" onClick={()=> showMenu(!Toggle)}></i>
