@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import i18n from '../i18n';
+import { useTranslation } from "react-i18next";
 
 const Header = () =>{
 
@@ -19,12 +21,20 @@ const Header = () =>{
         }
     }, [darkMode])
 
+    const {t} = useTranslation()
 
+    const changeLanguageEs = ()=> {
+        i18n.changeLanguage("es")
+    }
+
+    const changeLanguageEn = ()=> {
+        i18n.changeLanguage("en")
+    }
 
     return (
         <header className='top-auto bottom-0  w-screen dark:bg-gray-800 ' id='home'>
             <nav className="fixed flex justify-between items-center gap-4 bottom-0 h-[4rem] p-6 w-screen bg-[#e1e1e1] dark:bg-[#475569] z-50 ">
-                <a href="index.html" className=""><span className="  font-bold  bg-clip-text text-transparent bg-Gradient-Title text-3xl  ">Hola !</span></a>
+                <a href="index.html" className=""><span className="  font-bold  bg-clip-text text-transparent bg-Gradient-Title text-3xl  "> {t('hello')} </span></a>
 
                 <div className={Toggle ? 'nav-menu show-menu dark:bg-Gradient-show-menu dark:shadow-3da' : 'nav-menu'}>
                     <ul className="grid grid-cols-3 gap-8 ">
@@ -62,6 +72,11 @@ const Header = () =>{
                                 
                                 <i className="uil uil-sun block text-center m-auto text-lg dark:hidden"></i><i className="uil uil-moon hidden dark:block dark:text-center  dark:text-lg dark:text-gray-300 "></i>
                             </label>
+                        </li>
+
+                        <li className=" flex justify-center gap-4">
+                        <button onClick={changeLanguageEs} className=" text-center  text-lg">ES</button> 
+                        <button onClick={changeLanguageEn} className=" text-center text-lg">EN</button>
                         </li>
                         
                     </ul>
