@@ -40,25 +40,25 @@ const Header = () =>{
                     <ul className="grid grid-cols-3 gap-8 ">
                         <li className="">
                             <a href="#welcome" className="nav-link">
-                                <i className="uil uil-estate dark:text-gray-300  lg:hidden"></i><span className="dark:text-gray-300"> Bienvenido</span>
+                                <i className="uil uil-estate dark:text-gray-300  lg:hidden"></i><span className="dark:text-gray-300">{t('welcomeIcon')}</span>
                             </a>
                         </li>
 
                         <li className="">
                             <a href="#about" className="nav-link" >
-                                <i className="uil uil-user block dark:text-gray-300 lg:hidden"></i> <span className="dark:text-gray-300 ">Sobre mi</span>
+                                <i className="uil uil-user block dark:text-gray-300 lg:hidden"></i> <span className="dark:text-gray-300 ">{t('aboutIcon')}</span>
                             </a>
                         </li>
 
                         <li className="">
                             <a href="#travel" className="nav-link">
-                                <i className="uil uil-file-alt block dark:text-gray-300 lg:hidden"></i> <span className="dark:text-gray-300 ">Su viaje</span>
+                                <i className="uil uil-file-alt block dark:text-gray-300 lg:hidden"></i> <span className="dark:text-gray-300 ">{t('travelIcon')}</span>
                             </a>
                         </li>
 
                         <li className="">
                             <a href="#contact" className="nav-link">
-                                <i className="uil uil-briefcase-alt dark:text-gray-300 block lg:hidden"></i> <span className="dark:text-gray-300 ">Contacto</span>
+                                <i className="uil uil-briefcase-alt dark:text-gray-300 block lg:hidden"></i> <span className="dark:text-gray-300 ">{t('contactIcon')}</span>
                             </a>
                         </li>
                         

@@ -1,7 +1,11 @@
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 
 function Contact() {
+
+    const { t } = useTranslation()
+
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -16,12 +20,12 @@ function Contact() {
     
     return (
         <section className="mb-24 mt-8" id="contact">
-            <h2 className="text-[hsl(0, 0%, 20%)] text-2xl font-semibold m-4">Ponte en contacto</h2>
+            <h2 className="text-[hsl(0, 0%, 20%)] text-2xl font-semibold m-4"> {t('contact')} </h2>
             <span className="section__subtitle"></span>
 
             <div className="grid gap-x-12 justify-center pb-12">
                 <div className="contact__content">
-                    <h3 className="text-center  text-base font-medium mb-6 ">Hablemos !</h3>
+                    <h3 className="text-center  text-base font-medium mb-6 ">{t('contactTalk')}</h3>
 
                     <div className="grid gap-y-4 grid-cols-[300px]  ">
                         <div className="bg-[#fff] border border-solid border-black/10 p4 rounded-xl text-center ">
@@ -30,41 +34,41 @@ function Contact() {
                             <h3 className="text-sm font-medium">Email</h3>
                             <span className="block text-sm mb-3">r.ivann.gonzalezz@gmail.com</span>
 
-                            <a href="" className="contact__button inline-flex text-[hsl(0,0%,46%)] text-sm items-center justify-center gap-1  hover:translate-x-1 hover:transition-transform "> Escribame {" "}<i className="bx bx-right-arrow-alt contact__button-icon text-base  hover:translate-x-1 hover:transition-transform "></i></a>
+                            <a href="" className="contact__button inline-flex text-[hsl(0,0%,46%)] text-sm items-center justify-center gap-1  hover:translate-x-1 hover:transition-transform "> {t('contactWriteMe')} {" "}<i className="bx bx-right-arrow-alt contact__button-icon text-base  hover:translate-x-1 hover:transition-transform "></i></a>
                         </div>
 
                         <div className="bg-[#fff] border border-solid border-black/10 p4 rounded-xl text-center ">
                             <i className="bx bxl-whatsapp text-3xl text-[hsl(0,0%,20%)] mb-1"></i>
 
                             <h3 className="text-sm font-medium ">Whatsapp</h3>
-                            <span className="block text-sm mb-3 ">+54-11-4097-0295</span>
+                            
 
-                            <a href="" className="contact__button inline-flex text-[hsl(0,0%,46%)] text-sm items-center justify-center gap-1 hover:translate-x-1 hover:transition-transform"> Escribame {" "}<i className="bx bx-right-arrow-alt contact__button-icon hover:translate-x-1 hover:transition-transform"></i></a>
+                            <a href="https://wa.me/541140970295" className="contact__button inline-flex text-[hsl(0,0%,46%)] text-sm items-center justify-center gap-1 hover:translate-x-1 hover:transition-transform"> {t('contactWriteMe')}  {" "}<i className="bx bx-right-arrow-alt contact__button-icon hover:translate-x-1 hover:transition-transform"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div className="contact__content">
-                    <h3 className="text-center text-base font-medium mb-6">Escribeme tu propuesta</h3>
+                    <h3 className="text-center text-base font-medium mb-6">{t('contactWriteIdea')} </h3>
 
                     <form ref={form} onSubmit={sendEmail} className="w-full">
                         <div className="relative mb-8 h-16">
-                            <label className="contact__form-tag">Nombre</label>
-                            <input type="text" name="name" className='contact__form-input' placeholder='Inserte su nombre'/>
+                            <label className="contact__form-tag">{t('name')}</label>
+                            <input type="text" name="name" className='contact__form-input' placeholder= {t('writeName')} />
                         </div>
 
                         <div className="relative mb-8 h-16">
                             <label className="contact__form-tag">E-mail</label>
-                            <input type="email" name="email" className='contact__form-input ' placeholder='Inserte su E-mail'/>
+                            <input type="email" name="email" className='contact__form-input ' placeholder={t('writeMail')}/>
                         </div>
 
                         <div className=" relative mb-8 h-44">
-                            <label className="contact__form-tag">Proyecto</label>
-                            <textarea name="proyect" cols="30" rows="10" className='contact__form-input ' placeholder='Escriba su idea'></textarea>
+                            <label className="contact__form-tag">{t('proyect')}</label>
+                            <textarea name="proyect" cols="30" rows="10" className='contact__form-input ' placeholder={t('dropIdea')}></textarea>
                         </div>
 
                         <button className="rounded-lg py-2 px-5 text-base font-medium bg-[#1a1a1a] text-[#fff] m-auto cursor-pointer border flex">
-                            Send Message
+                        {t('sendMsg')}
                             <svg
                 className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
