@@ -1,66 +1,141 @@
 import { useState } from 'react';
 import julio from '../assets/9dejulio.jpg'
-
-const slides = [
-    { title: "Slide1", text: "Para su mayor seguridad, use los cinturones de seguridad" },
-    { title: "Slide2", text: "Está en llamada, o simplemente no quiere ruidos dentro del vehículo, puede indicármelo y con gusto quito la radio para un mayor confort en su viaje" },
-    { title: "Slide3", text: "Si tiene demasiado frío/calor sin ningún problema puede pedir el uso de AC" },
-    { title: "Slide4", text: "Antes de efectuar algún cambio de ruta en la app, por favor, indicar mi disponibilidad" },
-    { title: "Slide5", text: "Cerrar las puertas despacio" },
-    { title: "Slide6", text: "En lo posible evitar tomar y comer dentro del vehículo" },
-    { title: "Slide7", text: "Por cuestiones de limpieza, dentro del vehículo está prohibido fumar" },
-    { title: "Slide8", text: "Si mi servicio cumplió sus expectativas, se agradece mucho la calificación 5 estrellas" },
-];
+import { useTranslation } from 'react-i18next';
 
 const Travel = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-
     const nextSlide = () => {
-        setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
+        setActiveIndex((prevIndex) => (prevIndex + 1) % 8);
     };
-
-
-    const totalSlides = slides.length;
+    const totalSlides = 8;
     const angle = 360 / totalSlides;
-
     const prevSlide = () => {
-        setActiveIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+        setActiveIndex((prevIndex) => (prevIndex - 1 + 8) % 8);
     };
-
+    const { t } = useTranslation()
     return (
-        <section className="p-4  w-full h-[400px]"
-        style={{backgroundImage: `url(${julio})`}}
-        id='travel'>
-            <div className=" relative flex items-center justify-center"
-        >
-                <h2 className= 'bg-white'>Recomendaciones</h2>
+        <section className="p-4  w-full h-[400px] " style={{backgroundImage: `url(${julio})`}} id='travel'>
+            <div className=" relative flex items-center justify-center">
 
                 <div
-                    className="absolute z-0 top-6 w-[50%] h-[320px] transition-transform duration-700"
+                    className="absolute z-0 top-6 w-[50%] h-[270px] transition-transform duration-700"
                     style={{
                         transform: `rotateY(-${activeIndex * angle}deg)`,
                         transformStyle: 'preserve-3d'
                     }}
                 >
-                    {slides.map((slide, index) => (
-                        <div
-                            key={index}
-                            className=" absolute w-full h-full flex items-center justify-center text-center bg-white shadow-lg rounded-lg"
+                    
+                    <div
+                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
                             style={{
-                                transform: `rotateY(${index * angle}deg) translateZ(200px)`,
-                                opacity: index === activeIndex ? 1 : 0.05,
+                                transform: `rotateY(${0 * angle}deg) translateZ(200px)`,
+                                opacity: 0 === activeIndex ? 1 : 0.05,
                             }}
                         >
                             <div>
-                                <h1 className="text-2xl font-bold mb-4">{slide.title}</h1>
-                                <p className="text-gray-600">{slide.text}</p>
+                                <h1 className=" relative text-2xl font-bold text-center "></h1>
+                                <p className="text-gray-600 text-center p-4">{t('reco1')}</p>
                             </div>
                         </div>
-                    ))}
+
+                        <div
+                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
+                            style={{
+                                transform: `rotateY(${1 * angle}deg) translateZ(200px)`,
+                                opacity: 1 === activeIndex ? 1 : 0.05,
+                            }}
+                        >
+                            <div>
+                                
+                                <p className="text-gray-600 text-center p-4">{t('reco2')}</p>
+                            </div>
+                        </div>
+
+                        <div
+                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
+                            style={{
+                                transform: `rotateY(${2 * angle}deg) translateZ(200px)`,
+                                opacity: 2 === activeIndex ? 1 : 0.05,
+                            }}
+                        >
+                            <div>
+                                
+                                <p className="text-gray-600 text-center p-4">{t('reco3')}</p>
+                            </div>
+                        </div>
+
+                        <div
+                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
+                            style={{
+                                transform: `rotateY(${3 * angle}deg) translateZ(200px)`,
+                                opacity: 3 === activeIndex ? 1 : 0.05,
+                            }}
+                        >
+                            <div>
+                                
+                                <p className="text-gray-600 text-center p-4">{t('reco4')}</p>
+                            </div>
+                        </div>
+
+                        <div
+                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
+                            style={{
+                                transform: `rotateY(${4 * angle}deg) translateZ(200px)`,
+                                opacity: 4 === activeIndex ? 1 : 0.05,
+                            }}
+                        >
+                            <div>
+                                
+                                <p className="text-gray-600 text-center p-4">{t('reco5')}</p>
+                            </div>
+                        </div>
+
+                        <div
+                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
+                            style={{
+                                transform: `rotateY(${5 * angle}deg) translateZ(200px)`,
+                                opacity: 5 === activeIndex ? 1 : 0.05,
+                            }}
+                        >
+                            <div>
+                                
+                                <p className="text-gray-600 text-center p-4">{t('reco6')}</p>
+                            </div>
+                        </div>
+
+                        <div
+                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
+                            style={{
+                                transform: `rotateY(${6 * angle}deg) translateZ(200px)`,
+                                opacity: 6 === activeIndex ? 1 : 0.05,
+                            }}
+                        >
+                            <div>
+                                
+                                <p className="text-gray-600 text-center p-4">{t('reco7')}</p>
+                            </div>
+                        </div>
+
+                        <div
+                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
+                            style={{
+                                transform: `rotateY(${7 * angle}deg) translateZ(200px)`,
+                                opacity: 7 === activeIndex ? 1 : 0.05,
+                            }}
+                        >
+                            <div>
+                                
+                                <p className="text-gray-600 text-center p-4">{t('reco8')}</p>
+                            </div>
+                        </div>
+
+
 
                 </div>
-                <button onClick={prevSlide} className="prev"><i className="uil uil-arrow-left"></i></button>
-                <button onClick={nextSlide} className="next"><i className="uil uil-arrow-right"></i></button>
+                <button onClick={prevSlide} className="prev">
+                    <div className="bg-white rounded-[100%] h-[40px]  "><i className="uil uil-arrow-left"></i></div></button>
+                <button onClick={nextSlide} className="next">
+                    <div className="bg-white rounded-[100%]  h-[40px] "><i className="uil uil-arrow-right"></i></div></button>
             </div>
         </section>
     );

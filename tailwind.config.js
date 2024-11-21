@@ -37,7 +37,8 @@ export default {
         'Toggle-Gradient' : 'linear-gradient( to right,#fbea24 , #b47509)',
         'Gradient-show-menu' : 'radial-gradient(circle at bottom, #475569,#8596ab )',
         'Gradient-Title' : 'linear-gradient(to right, #0F2027, #203A43, #2C5364)',
-        'about' : 'linear-gradient(to top, #d2cac8, #5c633c)'
+        'about' : 'linear-gradient(to top, #d2cac8, #5c633c)',
+        'cardGradient': 'linear-gradient(to right, #ffe000, #799f0c)'
       },
       spacing:{
         'calc-left' : 'calc(50% - 110px)'

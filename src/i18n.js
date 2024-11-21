@@ -38,9 +38,15 @@ i18n.use(LanguageDetector)
                 writeName:"Write your name",
                 writeMail: "Write your E-mail",
                 dropIdea:"Drop your idea",
-                sendMsg: "Send Message"
-
-                
+                sendMsg: "Send Message",
+                reco1: "For your safety, please wear your seatbelt.",
+                reco2:"If the radio bothers you, just let me know. Your comfort is my priority.",
+                reco3:"If you'd like, feel free to ask for the AC to be turned on.",
+                reco4:"Before making any route changes in the app, please check with me first.",
+                reco5:"Please close the doors gently.",
+                reco6:"Try to avoid eating or drinking inside the car",
+                reco7:"Smoking is not allowed inside the vehicle",
+                reco8:"If my service met your expectations, a 5-star rating would be greatly appreciated",
             }
         },
         es:{
@@ -69,9 +75,15 @@ i18n.use(LanguageDetector)
                 writeName:"Escriba su nombre",
                 writeMail: "Escriba su E-mail",
                 dropIdea:"Escriba su idea",
-                sendMsg: "Enviar Mensaje"
-
-                
+                sendMsg: "Enviar Mensaje",
+                reco1: "Por seguridad, use los cinturones de seguridad",
+                reco2:"Si la radio le molesta digamelo, mi prioridas es su comfort",
+                reco3:"Si asi lo desea, puede pedir el uso de AC",
+                reco4:"Antes de efectuar algún cambio de ruta en la app, por favor, indicar mi disponibilidad",
+                reco5:"Cerrar las puertas despacio",
+                reco6:"Evitar tomar y comer dentro del vehículo",
+                reco7:"Está prohibido fumar dentro del vehiculo",
+                reco8:"Si mi servicio cumplió sus expectativas, se agradece mucho la calificación 5 estrellas",
             }
         }
     }
