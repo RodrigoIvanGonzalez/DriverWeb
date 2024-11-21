@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import julio from '../assets/9dejulio.jpg'
+import julio from '../assets/9dejulio_light_blur.jpg'
 import { useTranslation } from 'react-i18next';
 
 const Travel = () => {

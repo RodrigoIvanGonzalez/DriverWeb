@@ -12,9 +12,9 @@ const About = () => {
         >
         
 
-            <img className= " relative bg-no-repeat bg-center bg-cover  w-[145px] h--[190px] rounded-xl " src={perfilCV} alt="Hi !" />
+            <img className= " relative bg-no-repeat bg-center bg-cover dark:shadow-white-glow  w-[145px] h--[190px] rounded-xl " src={perfilCV} alt="Hi !" />
             <div className="relative self-center text-lg font-medium ul ">
-                    <ul className="relative  top-10">
+                    <ul className="relative  dark:text-emerald-100">
                         <li>{t('aboutName')}</li>
                         <li>{t('aboutLastName')}</li>
                         <li>{t('aboutCar')}</li>
@@ -23,8 +23,8 @@ const About = () => {
             </div>
         </div>
             <div className="mb-8">
-                <h2 className=" relative font-semibold text-2xl mb-4">{t("aboutTitle")}</h2>
-                <span className='relative text-sm mb-8'>
+                <h2 className=" relative font-semibold text-2xl mb-4 dark:text-emerald-100">{t("aboutTitle")}</h2>
+                <span className='relative text-sm mb-8 dark:text-emerald-200'>
                 {t("aboutText")}
                 </span>
             </div>

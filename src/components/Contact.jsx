@@ -20,57 +20,57 @@ function Contact() {
     
     return (
         <section className="mb-24 mt-8" id="contact">
-            <h2 className="text-[hsl(0, 0%, 20%)] text-2xl font-semibold m-4"> {t('contact')} </h2>
+            <h2 className="text-[hsl(0, 0%, 20%)] text-2xl font-semibold m-4 dark:text-emerald-100"> {t('contact')} </h2>
             <span className="section__subtitle"></span>
 
             <div className="grid gap-x-12 justify-center pb-12">
                 <div className="contact__content">
-                    <h3 className="text-center  text-base font-medium mb-6 ">{t('contactTalk')}</h3>
+                    <h3 className="text-center  text-base font-medium mb-6 dark:text-emerald-100 ">{t('contactTalk')}</h3>
 
                     <div className="grid gap-y-4 grid-cols-[300px]  ">
-                        <div className="bg-[#fff] border border-solid border-black/10 p4 rounded-xl text-center ">
-                            <i className="bx bx-mail-send text-[2rem] mb-1 "></i>
+                        <div className="dark:bg-gray-700 dark:shadow-green-glow border border-solid border-black/10 p4 rounded-xl text-center ">
+                            <i className="bx bx-mail-send text-[2rem] mb-1 dark:text-emerald-100 "></i>
 
-                            <h3 className="text-sm font-medium">Email</h3>
-                            <span className="block text-sm mb-3">r.ivann.gonzalezz@gmail.com</span>
+                            <h3 className="text-sm font-medium dark:text-emerald-100">Email</h3>
+                            <span className="block text-sm mb-3 dark:text-emerald-100">r.ivann.gonzalezz@gmail.com</span>
 
-                            <a href="" className="contact__button inline-flex text-[hsl(0,0%,46%)] text-sm items-center justify-center gap-1  hover:translate-x-1 hover:transition-transform "> {t('contactWriteMe')} {" "}<i className="bx bx-right-arrow-alt contact__button-icon text-base  hover:translate-x-1 hover:transition-transform "></i></a>
+                            <a href="" className="contact__button inline-flex dark:text-emerald-300 text-sm items-center justify-center gap-1  hover:translate-x-1 hover:transition-transform "> {t('contactWriteMe')} {" "}<i className="bx bx-right-arrow-alt contact__button-icon text-base  hover:translate-x-1 hover:transition-transform dark:text-emerald-300 "></i></a>
                         </div>
 
-                        <div className="bg-[#fff] border border-solid border-black/10 p4 rounded-xl text-center ">
-                            <i className="bx bxl-whatsapp text-3xl text-[hsl(0,0%,20%)] mb-1"></i>
+                        <div className="dark:bg-gray-700 dark:shadow-green-glow border border-solid border-black/10 p4 rounded-xl text-center ">
+                            <i className="bx bxl-whatsapp text-3xl dark:text-emerald-100 mb-1"></i>
 
-                            <h3 className="text-sm font-medium ">Whatsapp</h3>
+                            <h3 className="text-sm font-medium dark:text-emerald-100">Whatsapp</h3>
                             
 
-                            <a href="https://wa.me/541140970295" className="contact__button inline-flex text-[hsl(0,0%,46%)] text-sm items-center justify-center gap-1 hover:translate-x-1 hover:transition-transform"> {t('contactWriteMe')}  {" "}<i className="bx bx-right-arrow-alt contact__button-icon hover:translate-x-1 hover:transition-transform"></i></a>
+                            <a href="https://wa.me/541140970295" className="contact__button inline-flex text-[hsl(0,0%,46%)] text-sm items-center justify-center gap-1 hover:translate-x-1 hover:transition-transform dark:text-emerald-300"> {t('contactWriteMe')}  {" "}<i className="bx bx-right-arrow-alt contact__button-icon hover:translate-x-1 hover:transition-transform dark:text-emerald-300 "></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div className="contact__content">
-                    <h3 className="text-center text-base font-medium mb-6">{t('contactWriteIdea')} </h3>
+                    <h3 className=" text-xl font-medium my-6 dark:text-emerald-400 " style={{ textShadow: '0 4px 15px rgba(82, 213, 177, 0.5)' }}>{t('contactWriteIdea')} </h3>
 
                     <form ref={form} onSubmit={sendEmail} className="w-full">
-                        <div className="relative mb-8 h-16">
-                            <label className="contact__form-tag">{t('name')}</label>
-                            <input type="text" name="name" className='contact__form-input' placeholder= {t('writeName')} />
+                        <div className="relative mb-8 h-16 ">
+                            <label className="contact__form-tag rounded-lg dark:bg-gray-700" >{t('name')}</label>
+                            <input type="text" name="name" className='contact__form-input dark:bg-gray-700 dark:shadow-green-glow' placeholder= {t('writeName')} />
                         </div>
 
                         <div className="relative mb-8 h-16">
-                            <label className="contact__form-tag">E-mail</label>
-                            <input type="email" name="email" className='contact__form-input ' placeholder={t('writeMail')}/>
+                            <label className="contact__form-tag rounded-lg dark:bg-gray-700">E-mail</label>
+                            <input type="email" name="email" className='contact__form-input dark:bg-gray-700 dark:shadow-green-glow' placeholder={t('writeMail')}/>
                         </div>
 
                         <div className=" relative mb-8 h-44">
-                            <label className="contact__form-tag">{t('proyect')}</label>
-                            <textarea name="proyect" cols="30" rows="10" className='contact__form-input ' placeholder={t('dropIdea')}></textarea>
+                            <label className="contact__form-tag rounded-lg   dark:bg-gray-700">{t('proyect')}</label>
+                            <textarea name="proyect" cols="30" rows="10" className='contact__form-input dark:bg-gray-700 dark:shadow-green-glow' placeholder={t('dropIdea')}></textarea>
                         </div>
 
-                        <button className="rounded-lg py-2 px-5 text-base font-medium bg-[#1a1a1a] text-[#fff] m-auto cursor-pointer border flex">
+                        <button className="rounded-lg py-2 px-5 text-base font-medium bg-[#1a1a1a] dark:shadow-green-glow text-emerald-300 m-auto cursor-pointer border flex">
                         {t('sendMsg')}
                             <svg
-                className="button__icon"
+                className="button__icon "
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"

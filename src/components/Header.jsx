@@ -40,25 +40,25 @@ const Header = () =>{
                     <ul className="grid grid-cols-3 gap-8 ">
                         <li className="">
                             <a href="#welcome" className="nav-link">
-                                <i className="uil uil-estate dark:text-gray-300  lg:hidden"></i><span className="dark:text-gray-300">{t('welcomeIcon')}</span>
+                                <i className="uil uil-estate dark:text-emerald-100  lg:hidden"></i><span className="dark:text-emerald-100">{t('welcomeIcon')}</span>
                             </a>
                         </li>
 
                         <li className="">
                             <a href="#about" className="nav-link" >
-                                <i className="uil uil-user block dark:text-gray-300 lg:hidden"></i> <span className="dark:text-gray-300 ">{t('aboutIcon')}</span>
+                                <i className="uil uil-user block dark:text-emerald-100 lg:hidden"></i> <span className="dark:text-emerald-100 ">{t('aboutIcon')}</span>
                             </a>
                         </li>
 
                         <li className="">
                             <a href="#travel" className="nav-link">
-                                <i className="uil uil-file-alt block dark:text-gray-300 lg:hidden"></i> <span className="dark:text-gray-300 ">{t('travelIcon')}</span>
+                                <i className="uil uil-file-alt block dark:text-emerald-100 lg:hidden"></i> <span className="dark:text-emerald-100 ">{t('travelIcon')}</span>
                             </a>
                         </li>
 
                         <li className="">
                             <a href="#contact" className="nav-link">
-                                <i className="uil uil-briefcase-alt dark:text-gray-300 block lg:hidden"></i> <span className="dark:text-gray-300 ">{t('contactIcon')}</span>
+                                <i className="uil uil-briefcase-alt dark:text-emerald-100 block lg:hidden"></i> <span className="dark:text-emerald-100 ">{t('contactIcon')}</span>
                             </a>
                         </li>
                         
@@ -70,22 +70,22 @@ const Header = () =>{
                                 {/* <div className=" w-full h-full peer-checked:bg-Toggle-Gradient-Dark absolute top-0 left-0 rounded-full"></div>
                                 <div className="w-[12px] h-[12px]  bg-gray-400 rounded-full    peer-checked:translate-x-[15px] transition-transform "></div> */}
                                 
-                                <i className="uil uil-sun block text-center m-auto text-lg dark:hidden"></i><i className="uil uil-moon hidden dark:block dark:text-center  dark:text-lg dark:text-gray-300 "></i>
+                                <i className="uil uil-sun block text-center m-auto text-lg dark:hidden"></i><i className="uil uil-moon hidden dark:block dark:text-center  dark:text-lg dark:text-emerald-100"></i>
                             </label>
                         </li>
 
                         <li className=" flex justify-center gap-4">
-                        <button onClick={changeLanguageEs} className=" text-center  text-lg">ES</button> 
-                        <button onClick={changeLanguageEn} className=" text-center text-lg">EN</button>
+                        <button onClick={changeLanguageEs} className=" text-center dark:text-emerald-100 text-lg">ES</button> 
+                        <button onClick={changeLanguageEn} className=" text-center dark:text-emerald-100 text-lg">EN</button>
                         </li>
                         
                     </ul>
 
 
-                    <i className='uil uil-times absolute block right-[1.2rem] bottom-4 text-2xl cursor-pointer text-Title-color hover:text-Tilte-Color-Dark dark:text-gray-300 ' onClick={()=> showMenu(!Toggle)} ></i>
+                    <i className='uil uil-times absolute block right-[1.2rem] bottom-4 text-2xl cursor-pointer text-Title-color hover:text-Tilte-Color-Dark dark:text-emerald-100' onClick={()=> showMenu(!Toggle)} ></i>
                 </div>
                 <div className=""  >
-                    <i className="uil uil-apps text-Gradient-Title block cursor-pointer text-lg" onClick={()=> showMenu(!Toggle)}></i>
+                    <i className="uil uil-apps text-Gradient-Title block cursor-pointer text-lg dark:text-emerald-100" onClick={()=> showMenu(!Toggle)}></i>
                 </div>
 
             </nav>
