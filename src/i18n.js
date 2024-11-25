@@ -14,7 +14,7 @@ i18n.use(LanguageDetector)
     resources: {
         en: {
             translation: {
-                hello : "hello !",
+                hello : "HELLO !",
                 welcome:" Welcome on board !",
                 welcomeIcon: "Welcome",
                 aboutIcon: "About Me",
@@ -51,7 +51,7 @@ i18n.use(LanguageDetector)
         },
         es:{
             translation:{
-                hello : "hola !",
+                hello : "HOLA !",
                 welcome:"Bienvenido a bordo !",
                 welcomeIcon: "Bienvenido",
                 aboutIcon: "Sobre Mi",

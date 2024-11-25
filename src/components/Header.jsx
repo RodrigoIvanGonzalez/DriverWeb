@@ -34,7 +34,7 @@ const Header = () =>{
     return (
         <header className='top-auto bottom-0  w-screen dark:bg-gray-800 ' id='home'>
             <nav className="fixed flex justify-between items-center gap-4 bottom-0 h-[4rem] p-6 w-screen bg-[#e1e1e1] dark:bg-[#475569] z-50 ">
-                <a href="index.html" className=""><span className="  font-bold  bg-clip-text text-transparent bg-Gradient-Title text-3xl  "> {t('hello')} </span></a>
+                <a href="index.html" className=""><span className="  font-bold  bg-clip-text text-transparent bg-Gradient-Title text-3xl dark:bg-cardGradient " style={{ textShadow: '0 4px 15px rgba(255, 255, 255, 0.5)'}}> {t('hello')} </span></a>
 
                 <div className={Toggle ? 'nav-menu show-menu dark:bg-Gradient-show-menu dark:shadow-3da' : 'nav-menu'}>
                     <ul className="grid grid-cols-3 gap-8 ">

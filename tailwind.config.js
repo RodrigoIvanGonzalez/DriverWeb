@@ -40,7 +40,7 @@ export default {
         'Gradient-show-menu' : 'radial-gradient(circle at bottom, #475569,#8596ab )',
         'Gradient-Title' : 'linear-gradient(45deg, #0F2027, #5bb2b7)',
         'about' : 'linear-gradient(to top, #d2cac8, #5c633c)',
-        'cardGradient': 'linear-gradient(to right, #ffe000, #799f0c)'
+        'cardGradient': 'linear-gradient(to right, #649173, #dbd5a4)'
       },
       spacing:{
         'calc-left' : 'calc(50% - 110px)'
