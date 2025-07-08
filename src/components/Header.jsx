@@ -88,6 +88,7 @@ const Header = () =>{
                     <i className="uil uil-apps text-Gradient-Title block cursor-pointer text-lg dark:text-emerald-100" onClick={()=> showMenu(!Toggle)}></i>
                 </div>
 
+
             </nav>
         </header>
     )
