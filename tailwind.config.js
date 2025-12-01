@@ -27,10 +27,14 @@ export default {
         'green-glow': '0 4px 15px rgba(82, 213, 177, 0.5)'
       },
       colors:{
-        'background' : '#113c52',
-        'primary' : '#1F4F6B',
-        'secondary' : '#FDF9F4',
-        'accent' : '#fdf0c7',
+  brand: {
+    dark: "#0A1A2F",
+    dark2: "#0F2747",
+    primary: "#4DA3FF",
+    primaryLight: "#80BFFF",
+    textLight: "#E6F1FF"
+  },
+
         'Title-color' : 'hsl(0%, 0%, 20%)',
         'Tilte-Color-Dark' : 'hsl(0%, 0%, 0%)',
         'Text-color':'hsl(0%, 0%, 46%)',
@@ -48,7 +52,7 @@ export default {
       },
       spacing:{
         'calc-left' : 'calc(50% - 110px)'
-      }
+      },
     },
   },
   plugins: [],

@@ -1,75 +1,236 @@
-// import welcomeImage from '../assets/Welcome-img.jpg'
-// import { useTranslation } from "react-i18next";
-import  obelisco from '../assets/obelisco.jpg'
-// import laBoca from '../assets/laBoca.jpg'
+
+import obelisco from '../assets/obelisco.jpg'
 import casaRosada from '../assets/casaRosada.jpg'
 import florarisGenerica from '../assets/florarisGenerica.jpg'
 import facultadDerecho from '../assets/facultadDerecho.jpg'
+import { useGSAP } from '@gsap/react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 
 const Welcome = () => {
-
-
-//     const { t } = useTranslation()
-
-    return (
-//         <>
-//             <section className='flex relative bg-cover bg-no-repeat' id='welcome'>
-
-//                 <div className="z-10">
-//                     <h1 className=" text-slate-400 text-2xl m-4 py-4" style={{ textShadow: '0px 0px 50px rgba(0, 0, 0, 1)' }}>
-//                         {t('welcome')}
-//                     </h1>
-//                     <p className=" text-slate-400 text-sm m-4 drop-shadow-2xl tracking-tighter font-italic " style={{ textShadow: '0px 0px 50px rgba(0, 0, 0, 4)' }} > {t('welcomeParagraph')} <br /> {t('thanks')} <br /><br />{t('driver')}.
-//                     </p>
-//                 </div>
-
-//                 <div className='absolute inset-0 blur-[2px] brightness-50'>
-//                     <img className='rounded-sm h-full w-full' src={welcomeImage} alt="Welcome" />
-//                 </div>
-//             </section>
-//         </>
-
-<section className='flex flex-col items-center w-[100vw] max-w-[430px] px-4 pt-8 bg-background' id='welcome'>
-	<h1 className='text-3xl font-bold text-accent mb-7 text-center '>¡Bienvenidos a Buenos Aires!</h1>
-		<div className="flex justify-between ">
-				<img src={obelisco} className=' w-[30%] h-auto gap-2 rounded-lg object-cover '  />
-        <img src={facultadDerecho} className=' w-[30%] h-auto gap-2 rounded-lg object-cover  ' />
-        <img src={florarisGenerica} className=' w-[30%] h-auto gap-2 rounded-lg object-cover ' /> 
-		</div>
-	<h2 className='text-2xl font-bold text-accent text-center mt-5 mb-1'> BUENOS AIRES </h2>
-	<h3 className='text-2xl font-bold text-accent text-left'>te abraza</h3>
-	<span className='text-base text-accent text-center py-2'>con historia, ritmo y encuentros únicos.
-Gracias por elegirme para acompañarte en tu camino.</span>
-
-<article className='relative w-screen' id='hero'>
 	
-	<img src={casaRosada} className="w-full h-auto" />
-	<span className="absolute top-1   text-accent text-4xl font-bold px-4 py-2 rounded-md shadow-md">
-		VIVÍ <br/> BUENOS <br/> AIRES
+	useGSAP(()=> {
+		gsap.from('.titulo', {
+      opacity: 0,
+			y: 40,
+			duration: 1.3,
+      ease: "power3.out",
+      delay: 0.2,
+		})
+	})
+
+
+
+	useGSAP(()=> {
+		gsap.from(".imagen1", {
+			opacity: 0,
+			y: 50,
+			duration: 1.1,
+			ease: "power3.out",},
+    )
+	})
+
+		useGSAP(()=> {
+		gsap.from(".imagen2", {
+			opacity: 0,
+			y: -50,
+			duration: 1.1,
+			ease: "power3.out",
+      delay: .5},
+    )
+	})
+
+		useGSAP(()=> {
+		gsap.from(".imagen3", {
+			opacity: 0,
+			x: 50,
+			duration: 1.1,
+			ease: "power3.out",
+      delay: 1},
+    )
+	})
+  
+
+	useGSAP(()=> {
+		gsap.from(".casa", {
+			opacity: 0,
+      scale: 0.9,
+			duration: 1.4,
+      ease: "power3.out",
+			})})
+
+
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(".cta-button", {
+    y: 60,
+    scrollTrigger: {
+      trigger: ".cta-button",
+      start: "center center",
+  }})
+
+
+	return (
+
+
+		
+	<section 
+    className="min-h-screen w-full bg-gradient-to-b from-[#0A1A2F] to-[#0F2747]
+    text-white px-6 py-12 flex flex-col items-center">
+
+	<h1 
+    className='text-5xl font-extrabold tracking-wide text-center mb-10 bg-gradient-to-r from-[#4DA3FF] to-[#80BFFF] bg-clip-text text-transparent titulo'>
+      ¡Bienvenidos a Buenos Aires!
+  </h1>
+
+	<div className="img-div flex justify-between gap-2">
+		<img src={obelisco}  
+      className='w-[30%] h-auto rounded-lg object-cover imagen1' />
+		<img src={facultadDerecho}
+      className='w-[30%] h-auto rounded-lg object-cover imagen2' />
+		<img src={florarisGenerica}
+      className='w-[30%] h-auto rounded-lg object-cover imagen3' />
+	</div>
+
+	<span className='text-center max-w-md leading-loose text-gray-200 mb-12 mt-7'>
+			Con historia, ritmo y encuentros únicos.
+			Gracias por elegirme para acompañarte en tu camino. ¡Disfrutá de cada rincón, cada sabor y cada momento!
 	</span>
-	
-</article>
 
-</section>
-
-
-
-
-)
+	<article className="relative casa" id="hero">
+      <img
+      src={casaRosada}
+      className= 'hero-ba w-full h-full object-cover'
+      alt="Casa Rosada"
+        />
 
 
+    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <h2 className="text-4xl md:text-5xl font-extrabold
+        bg-gradient-to-r from-[#4DA3FF] to-[#dee3e7] bg-clip-text text-transparent 
+        drop-shadow-lg">
+
+          VIVÍ BUENOS AIRES
+
+      </h2>
+    </div>
+	</article>
+
+  <button className="cta-button mt-12 px-6 py-3 bg-[#4DA3FF] text-[#0A1A2F] font-bold rounded-xl shadow-lg hover:bg-[#80BFFF] transition-all">
+    Conocé más sobre tu viaje
+  </button>
+
+		</section>
+	)
+
+
+};
 
 
 
-
-
-
-
-
-
-
-
-}
 
 export default Welcome
 
+
+
+
+
+
+
+
+
+
+// export default function WelcomeSection() {
+
+
+
+//   useEffect(() => {
+//     gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+//     // CTA scroll animation
+//     gsap.from(".cta-button", {
+//       scrollTrigger: {
+//         trigger: ".cta-button",
+//         start: "top 90%"
+//       },
+//       opacity: 0,
+//       y: 40,
+//       duration: 1.1,
+//       ease: "power3.out"
+//     });
+//   }, []);
+
+
+
+// return (
+
+
+
+
+
+  
+// <section className="min-h-screen w-full bg-gradient-to-b from-[#0A1A2F] to-[#0F2747] text-white px-6 py-12 flex flex-col items-center">
+
+// <h1 className="welcome-title text-5xl font-extrabold tracking-wide text-center mb-10 bg-gradient-to-r from-[#4DA3FF] to-[#80BFFF] bg-clip-text text-transparent">
+// ¡Bienvenidos a Buenos Aires!
+// </h1>
+
+
+// {/* CITY IMAGE GRID */}
+// <div className="grid grid-cols-3 gap-4 max-w-xl mb-12">
+
+// <img
+// src={obelisco}
+// className="city-img w-full h-full object-cover"
+// alt="Ciudad de Buenos Aires"
+// />
+// <img
+// src={facultadDerecho}
+// className="city-img w-full h-full object-cover"
+// alt="Ciudad de Buenos Aires"
+// />
+// <img
+// src={florarisGenerica}
+// className="city-img w-full h-full object-cover"
+// alt="Ciudad de Buenos Aires"
+// />
+// </div>
+
+
+
+// {/* DESCRIPTION */}
+// <p className="text-center max-w-md leading-loose text-gray-200 mb-12">
+// Con historia, ritmo y encuentros únicos. Gracias por elegirme para
+// acompañarte en tu camino. ¡Disfrutá de cada rincón, cada sabor y cada
+// momento!
+// </p>
+
+
+// {/* HERO IMAGE SECTION */}
+
+// <img
+// src={casaRosada}
+// className= 'hero-ba w-full h-full object-cover'
+// alt="Casa Rosada"
+// />
+
+
+// <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+// <h2 className="text-4xl md:text-5xl font-extrabold tracking-wider drop-shadow-lg">
+// VIVÍ BUENOS AIRES
+// </h2>
+// </div>
+
+
+
+// {/* CTA */}
+// <button className="cta-button mt-12 px-6 py-3 bg-[#4DA3FF] text-[#0A1A2F] font-bold rounded-xl shadow-lg hover:bg-[#80BFFF] transition-all">
+// Conocé más sobre tu viaje
+// </button>
+// </section>
+// );
+// }
