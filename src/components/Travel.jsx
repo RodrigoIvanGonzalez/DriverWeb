@@ -36,7 +36,7 @@ const Travel = () => {
   return (
         <section
       id="travel"
-      className="w-full py-20 flex flex-col items-center justify-center bg-gradient-to-b from-brand-dark to-brand-dark2"
+      className="w-full py-20 overflow-hidden flex flex-col items-center justify-center bg-gradient-to-b from-brand-dark to-brand-dark2"
     >
       {/* Title */}
       <h2 className="text-3xl md:text-4xl font-extrabold mb-12 p-6 bg-gradient-to-r from-brand-primary to-brand-primaryLight bg-clip-text text-transparent">
@@ -44,16 +44,16 @@ const Travel = () => {
       </h2>
 
       {/* Carousel Wrapper */}
-      <div className="relative w-full max-w-4xl h-[360px] flex items-center justify-center perspective-[1200px]">
+      <div className="relative w-full max-w-full h-[360px] flex items-center justify-center perspective-[1200px] overflow-hidden">
         <div
           ref={carouselRef}
-          className="relative w-[70%] h-[280px]"
+          className="relative w-[60%] h-[280px]"
           style={{ transformStyle: 'preserve-3d' }}
         >
           {slides.map((key, index) => (
             <div
               key={key}
-              className="absolute w-full h-full flex items-center justify-center text-center rounded-3xl shadow-2xl px-8"
+              className=" absolute h-full flex items-center justify-center text-center rounded-3xl shadow-2xl px-8"
               style={{
                 background:
                   index === activeIndex
