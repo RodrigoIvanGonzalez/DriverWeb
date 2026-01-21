@@ -51,7 +51,7 @@ i18n.use(LanguageDetector)
         },
         es:{
             translation:{
-                hello : "HOLA !",
+                hello : "Bienvenido !",
                 welcome:"Bienvenido a bordo !",
                 welcomeIcon: "Bienvenido",
                 aboutIcon: "Sobre Mi",
@@ -77,10 +77,10 @@ i18n.use(LanguageDetector)
                 dropIdea:"Escriba su idea",
                 sendMsg: "Enviar Mensaje",
                 reco1: "Por seguridad, use los cinturones de seguridad",
-                reco2:"Si la radio le molesta digamelo, mi prioridas es su comfort",
+                reco2:"Mi prioridad es su comfort cualquier molestia con la radio (volumen, música o demás) avíseme",
                 reco3:"Si asi lo desea, puede pedir el uso de AC",
-                reco4:"Antes de efectuar algún cambio de ruta en la app, por favor, indicar mi disponibilidad",
-                reco5:"Cerrar las puertas despacio",
+                reco4:"Antes de efectuar algún cambio de ruta en la app, por favor, consulte mi disponibilidad",
+                reco5:"Cerrar las puertas despacio por favor",
                 reco6:"Evitar tomar y comer dentro del vehículo",
                 reco7:"Está prohibido fumar dentro del vehiculo",
                 reco8:"Si mi servicio cumplió sus expectativas, se agradece mucho la calificación 5 estrellas",
