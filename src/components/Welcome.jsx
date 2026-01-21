@@ -75,7 +75,7 @@ const Welcome = () => {
 
 
 		
-	<section 
+	<section id='welcome'
     className="min-h-screen w-full bg-gradient-to-b from-[#0A1A2F] to-[#0F2747]
     text-white px-6 py-12 flex flex-col items-center">
 

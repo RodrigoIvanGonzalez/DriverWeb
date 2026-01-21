@@ -1,144 +1,108 @@
-import { useState } from 'react';
-import julio from '../assets/9dejulio_light_blur.jpg'
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import gsap from 'gsap';
 
 const Travel = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const nextSlide = () => {
-        setActiveIndex((prevIndex) => (prevIndex + 1) % 8);
-    };
-    const totalSlides = 8;
-    const angle = 360 / totalSlides;
-    const prevSlide = () => {
-        setActiveIndex((prevIndex) => (prevIndex - 1 + 8) % 8);
-    };
-    const { t } = useTranslation()
-    return (
-        <section className="p-4  w-full h-[400px] " style={{backgroundImage: `url(${julio})`}} id='travel'>
-            <div className=" relative flex items-center justify-center">
+  const { t } = useTranslation();
+  const [activeIndex, setActiveIndex] = useState(0);
+  const carouselRef = useRef(null);
 
-                <div
-                    className="absolute z-0 top-6 w-[50%] h-[270px] transition-transform duration-700"
-                    style={{
-                        transform: `rotateY(-${activeIndex * angle}deg)`,
-                        transformStyle: 'preserve-3d'
-                    }}
-                >
-                    
-                    <div
-                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
-                            style={{
-                                transform: `rotateY(${0 * angle}deg) translateZ(200px)`,
-                                opacity: 0 === activeIndex ? 1 : 0.05,
-                            }}
-                        >
-                            <div>
-                                <h1 className=" relative text-2xl font-bold text-center "></h1>
-                                <p className="text-gray-600 text-center p-4">{t('reco1')}</p>
-                            </div>
-                        </div>
+  const slides = [
+    'reco1', 'reco2', 'reco3', 'reco4',
+    'reco5', 'reco6', 'reco7', 'reco8'
+  ];
 
-                        <div
-                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
-                            style={{
-                                transform: `rotateY(${1 * angle}deg) translateZ(200px)`,
-                                opacity: 1 === activeIndex ? 1 : 0.05,
-                            }}
-                        >
-                            <div>
-                                
-                                <p className="text-gray-600 text-center p-4">{t('reco2')}</p>
-                            </div>
-                        </div>
+  const totalSlides = slides.length;
+  const angle = 360 / totalSlides;
 
-                        <div
-                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
-                            style={{
-                                transform: `rotateY(${2 * angle}deg) translateZ(200px)`,
-                                opacity: 2 === activeIndex ? 1 : 0.05,
-                            }}
-                        >
-                            <div>
-                                
-                                <p className="text-gray-600 text-center p-4">{t('reco3')}</p>
-                            </div>
-                        </div>
+  const nextSlide = () => {
+    setActiveIndex((prev) => (prev + 1) % totalSlides);
+  };
 
-                        <div
-                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
-                            style={{
-                                transform: `rotateY(${3 * angle}deg) translateZ(200px)`,
-                                opacity: 3 === activeIndex ? 1 : 0.05,
-                            }}
-                        >
-                            <div>
-                                
-                                <p className="text-gray-600 text-center p-4">{t('reco4')}</p>
-                            </div>
-                        </div>
+  const prevSlide = () => {
+    setActiveIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
 
-                        <div
-                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
-                            style={{
-                                transform: `rotateY(${4 * angle}deg) translateZ(200px)`,
-                                opacity: 4 === activeIndex ? 1 : 0.05,
-                            }}
-                        >
-                            <div>
-                                
-                                <p className="text-gray-600 text-center p-4">{t('reco5')}</p>
-                            </div>
-                        </div>
+  useEffect(() => {
+    if (!carouselRef.current) return;
 
-                        <div
-                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
-                            style={{
-                                transform: `rotateY(${5 * angle}deg) translateZ(200px)`,
-                                opacity: 5 === activeIndex ? 1 : 0.05,
-                            }}
-                        >
-                            <div>
-                                
-                                <p className="text-gray-600 text-center p-4">{t('reco6')}</p>
-                            </div>
-                        </div>
+    gsap.to(carouselRef.current, {
+      rotateY: -activeIndex * angle,
+      duration: 1,
+      ease: 'power3.out'
+    });
+  }, [activeIndex, angle]);
 
-                        <div
-                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
-                            style={{
-                                transform: `rotateY(${6 * angle}deg) translateZ(200px)`,
-                                opacity: 6 === activeIndex ? 1 : 0.05,
-                            }}
-                        >
-                            <div>
-                                
-                                <p className="text-gray-600 text-center p-4">{t('reco7')}</p>
-                            </div>
-                        </div>
+  return (
+        <section
+      id="travel"
+      className="w-full py-20 flex flex-col items-center justify-center bg-gradient-to-b from-brand-dark to-brand-dark2"
+    >
+      {/* Title */}
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-12 bg-gradient-to-r from-brand-primary to-brand-primaryLight bg-clip-text text-transparent">
+        Recomendaciones para tu viaje
+      </h2>
 
-                        <div
-                            className=" absolute w-full h-full flex items-center justify-center text-center bg-cardGradient shadow-lg rounded-lg"
-                            style={{
-                                transform: `rotateY(${7 * angle}deg) translateZ(200px)`,
-                                opacity: 7 === activeIndex ? 1 : 0.05,
-                            }}
-                        >
-                            <div>
-                                
-                                <p className="text-gray-600 text-center p-4">{t('reco8')}</p>
-                            </div>
-                        </div>
-
-
-
-                </div>
-                <button onClick={prevSlide} className="prev">
-                    <div className="bg-white rounded-[100%] h-[40px]  "><i className="uil uil-arrow-left"></i></div></button>
-                <button onClick={nextSlide} className="next">
-                    <div className="bg-white rounded-[100%]  h-[40px] "><i className="uil uil-arrow-right"></i></div></button>
+      {/* Carousel Wrapper */}
+      <div className="relative w-full max-w-4xl h-[360px] flex items-center justify-center perspective-[1200px]">
+        <div
+          ref={carouselRef}
+          className="relative w-[70%] h-[280px]"
+          style={{ transformStyle: 'preserve-3d' }}
+        >
+          {slides.map((key, index) => (
+            <div
+              key={key}
+              className="absolute w-full h-full flex items-center justify-center text-center rounded-3xl shadow-2xl px-8"
+              style={{
+                background:
+                  index === activeIndex
+                    ? 'linear-gradient(160deg, #0F2747, #0A1A2F)'
+                    : 'linear-gradient(160deg, rgba(15,39,71,0.6), rgba(10,26,47,0.6))',
+                border: '1px solid rgba(77,163,255,0.25)',
+                transform: `rotateY(${index * angle}deg) translateZ(260px)`,
+                opacity: index === activeIndex ? 1 : 0.18,
+                filter: index === activeIndex ? 'none' : 'blur(1px)',
+              }}
+            >
+              <p className="text-brand-textLight text-lg leading-relaxed max-w-md">
+                {t(key)}
+              </p>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+
+        {/* Controls */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-6 w-12 h-12 rounded-full flex items-center justify-center bg-brand-dark2 border border-brand-primary/30 text-brand-primary hover:bg-brand-primary hover:text-brand-dark transition-all shadow-lg"
+        >
+          ‹
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-6 w-12 h-12 rounded-full flex items-center justify-center bg-brand-dark2 border border-brand-primary/30 text-brand-primary hover:bg-brand-primary hover:text-brand-dark transition-all shadow-lg"
+        >
+          ›
+        </button>
+      </div>
+
+      {/* Indicators */}
+      <div className="flex gap-3 mt-8">
+        {slides.map((_, i) => (
+          <span
+            key={i}
+            onClick={() => setActiveIndex(i)}
+            className={`w-3 h-3 rounded-full cursor-pointer transition-all ${
+              i === activeIndex
+                ? 'bg-brand-primary scale-125'
+                : 'bg-brand-primary/40'
+            }`}
+          />
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default Travel;

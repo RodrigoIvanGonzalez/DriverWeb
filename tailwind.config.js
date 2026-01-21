@@ -32,7 +32,8 @@ export default {
     dark2: "#0F2747",
     primary: "#4DA3FF",
     primaryLight: "#80BFFF",
-    textLight: "#E6F1FF"
+    textLight: "#E6F1FF",
+    accent: "#AAB8FF"
   },
 
         'Title-color' : 'hsl(0%, 0%, 20%)',
