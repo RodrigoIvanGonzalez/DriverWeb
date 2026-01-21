@@ -39,7 +39,7 @@ const Travel = () => {
       className="w-full py-20 flex flex-col items-center justify-center bg-gradient-to-b from-brand-dark to-brand-dark2"
     >
       {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-extrabold mb-12 bg-gradient-to-r from-brand-primary to-brand-primaryLight bg-clip-text text-transparent">
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-12 p-6 bg-gradient-to-r from-brand-primary to-brand-primaryLight bg-clip-text text-transparent">
         Recomendaciones para tu viaje
       </h2>
 
