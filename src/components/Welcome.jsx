@@ -117,7 +117,7 @@ const Welcome = () => {
     </div>
 	</article>
 
-  <button className="cta-button mt-12 px-6 py-3 bg-[#4DA3FF] text-[#0A1A2F] font-bold rounded-xl shadow-lg hover:bg-[#80BFFF] transition-all">
+  <button href="#travel" className="cta-button mt-12 px-6 py-3 bg-[#4DA3FF] text-[#0A1A2F] font-bold rounded-xl shadow-lg hover:bg-[#80BFFF] transition-all">
     Conocé más sobre tu viaje
   </button>
 
